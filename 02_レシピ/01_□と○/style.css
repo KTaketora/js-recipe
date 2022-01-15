@@ -12,4 +12,5 @@
 .rounded {
   border-radius: 50%;
 }
-square = square circle = square + rounded 
+square = square 
+circle = square + rounded 
