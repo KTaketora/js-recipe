@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app-input">
+      <h1>入力画面</h1>
+      <input type="number" v-model="inputValue" />
+      <p>入力額{{inputValue}}円</p>
+      <button v-on:click="plusPrice">入金</button>
+      <button v-on:click="minusPrice" v-bind:disabled="zandaka == 0">
+        出金
+      </button>
+    </div>
+    <div id="app-zandaka">
+      <h1>口座残高</h1>
+      <p>残高{{zandaka}}円</p>
+    </div>
+    <div id="app-record">
+      <h1>取引記録</h1>
+      <div v-for="(value, input) in logs" :key="input">{{value}}</div>
+    </div>
+  </body>
+</html>
